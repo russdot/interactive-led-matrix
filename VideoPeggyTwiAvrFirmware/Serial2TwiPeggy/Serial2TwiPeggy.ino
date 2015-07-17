@@ -45,7 +45,7 @@ void loop()
     while (count-- > 0 )
     {
       uint8_t c = Serial.read(); 
-      Wire.send(c);
+      Wire.write(c);
     }
     Wire.endTransmission();   
   }
