@@ -37,7 +37,7 @@ void sendBuffer()
   Wire.beginTransmission(PEGGY_ADDRESS);
   while (count--)
   {
-    Wire.send(*ptr++);
+    Wire.write(*ptr++);
   }
   Wire.endTransmission();
   
@@ -48,7 +48,7 @@ void sendBuffer()
   while (count-- )
   {
     Wire.beginTransmission(PEGGY_ADDRESS);
-    Wire.send(ptr,13);
+    Wire.write(ptr,13);
     ptr+=13;
     Wire.endTransmission();
   }
